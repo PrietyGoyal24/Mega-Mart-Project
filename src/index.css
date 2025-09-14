@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mega Mart Design System - Modern eCommerce Aesthetic */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    /* Primary Brand - Deep Blue */
+    --primary: 213 94% 32%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 84% 28%;
+
+    /* Secondary - Vibrant Orange */
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 25 85% 48%;
+
+    /* Success - Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Amber */
+    --warning: 43 96% 56%;
+    --warning-foreground: 220 13% 18%;
+
+    /* Destructive - Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Muted Colors */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent Colors */
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 13% 18%;
+
+    /* Border & Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 94% 32%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 32%) 0%, hsl(213 84% 42%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 91% 62%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 32%) 0%, hsl(25 95% 53%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 18% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 18% / 0.1), 0 2px 4px -1px hsl(220 13% 18% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 18% / 0.1), 0 4px 6px -2px hsl(220 13% 18% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 13% 18% / 0.1), 0 10px 10px -5px hsl(220 13% 18% / 0.04);
+    --shadow-glow: 0 0 20px hsl(213 94% 32% / 0.3);
+
+    /* Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 220 13% 9%;
+    --foreground: 220 14% 96%;
+
+    --card: 220 13% 12%;
+    --card-foreground: 220 14% 96%;
+
+    --primary: 213 94% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 84% 38%;
+
+    --secondary: 25 95% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 25 85% 53%;
+
+    --success: 142 76% 41%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 43 96% 61%;
+    --warning-foreground: 220 13% 9%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --muted: 220 13% 16%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 220 13% 16%;
+    --accent-foreground: 220 14% 96%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 213 94% 42%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 42%) 0%, hsl(213 84% 52%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(25 95% 58%) 0%, hsl(35 91% 67%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 42%) 0%, hsl(25 95% 58%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%) 0%, hsl(220 13% 16%) 100%);
+
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.12);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.25), 0 10px 10px -5px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(213 94% 42% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Mega Mart Custom Components */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  /* Product Card Animations */
+  .product-card {
+    @apply bg-card rounded-2xl border border-border shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02];
+  }
+
+  .product-card:hover {
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+  }
+
+  /* Navbar Glass Effect */
+  .navbar-glass {
+    @apply bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-border/50;
+  }
+
+  /* Loading Animations */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded-md;
+  }
+
+  .loading-dots {
+    @apply inline-flex space-x-1;
+  }
+
+  .loading-dots span {
+    @apply w-2 h-2 bg-current rounded-full animate-bounce;
+  }
+
+  .loading-dots span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .loading-dots span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-4;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .fade-in-left {
+    @apply opacity-0 translate-x-4;
+    animation: fadeInLeft 0.6s ease-out forwards;
+  }
+
+  .fade-in-right {
+    @apply opacity-0 -translate-x-4;
+    animation: fadeInRight 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    to {
+      @apply opacity-100 translate-x-0;
+    }
+  }
+
+  @keyframes fadeInRight {
+    to {
+      @apply opacity-100 translate-x-0;
+    }
+  }
+}
